@@ -5,6 +5,10 @@ import (
 	"gorm.io/gen"
 )
 
+/*
+ * 生成代码逻辑
+ * https://juejin.cn/post/7196511671626940476
+ */
 func main() {
 
 	g := gen.NewGenerator(gen.Config{
