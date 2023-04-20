@@ -27,7 +27,7 @@ func init() {
 }
 
 func ConnectDB() (conn *gorm.DB) {
-	//  打开数据库连接
+	//  打开数据库连接, :memory: 表示在内存中
 	conn, err := gorm.Open(sqlite.Open(":memory:"), &gorm.Config{})
 	if err != nil {
 		panic(fmt.Errorf("cannot establish db connection: %w", err))
