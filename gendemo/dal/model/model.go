@@ -30,12 +30,12 @@ func (p *Password) Value() (driver.Value, error) {
 }
 
 type User struct {
-	gorm.Model        // ID uint CreatAt time.Time UpdateAt time.Time DeleteAt gorm.DeleteAt If it is repeated with the definition will be ignored
-	ID         uint   `gorm:"primary_key"`
-	Name       string `gorm:"column:name"`
-	Age        int    `gorm:"column:age;type:varchar(64)"`
-	Role       string `gorm:"column:role;type:varchar(64)"`
-	Friends    []User `gorm:"-"` // only local used gorm ignore
+	gorm.Model
+	ID      uint   `gorm:"primary_key"`
+	Name    string `gorm:"column:name"`
+	Age     int    `gorm:"column:age;type:varchar(64)"`
+	Role    string `gorm:"column:role;type:varchar(64)"`
+	Friends []User `gorm:"-"` // 仅本地使用，不会映射到数据库
 }
 
 type Passport struct {
