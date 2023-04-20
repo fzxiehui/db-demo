@@ -9,6 +9,12 @@ import (
 	"gorm.io/gorm"
 )
 
+/*
+ * 定义了两个业务模型
+ * 1. Passport 用户账号
+ * 2. User 用户信息
+ */
+
 type Username string
 
 type Password string
